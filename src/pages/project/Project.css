@@ -1,6 +1,12 @@
-.ant-layout-content{
+.ant-layout-content .project-layout-content{
     background-color: white;
     padding: 10px;
+    position: absolute;
+    left: 200px;
+    right: 0;
+    top: 68px;
+    bottom: 0;
+    overflow-y: scroll;
 }
 .ant-menu{
     width: 100% !important;

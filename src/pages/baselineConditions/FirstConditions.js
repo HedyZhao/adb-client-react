@@ -1,6 +1,7 @@
 import { Button,Collapse,Radio  } from 'antd';
 import React from 'react'
 import './FirstConditions.css'
+const {Panel}=Collapse;
 export default function FirstConditions() {
   return (
             <div className='first-conditions-box'>

@@ -1,10 +1,11 @@
-import { AppstoreOutlined, MailOutlined, SettingOutlined,SendOutlined  } from '@ant-design/icons';
-import { Layout,Menu,Breadcrumb,Form,Input,Select,Button,Collapse,Radio  } from 'antd';
+import { AppstoreOutlined,FileTextOutlined,TagOutlined,EditOutlined,ContainerOutlined } from '@ant-design/icons';
+import { Layout,Menu,Breadcrumb } from 'antd';
 import React, { useState } from 'react';
 import {  Route } from "react-router-dom";
-import SecondCharacteristics from '../characteristics/SecondCharacteristics.js'
+import FirstConditions from '../baselineConditions/FirstConditions';
 import './Project.css'
-const { Panel } = Collapse;
+import ProjectDetail from './ProjectDetail.js';
+import ThirdCharacteristics from '../report/Report.js'
 const text = `
   A dog is a type of domesticated animal.
   Known for its loyalty and faithfulness,
@@ -20,19 +21,19 @@ function getItem(label, key, icon, children, type) {
   };
 }
 const items = [
-  getItem('Project detail', 'sub1', <MailOutlined/>),
+  getItem('Project detail', 'sub1', <ContainerOutlined />),
   getItem('Baseline Conditions', 'sub2', <AppstoreOutlined />, [
     getItem('Section 1', '1'),
     getItem('Section 2', '2'),
   ]),
-  getItem('Characteristics', 'sub3', <SettingOutlined />, [
+  getItem('Characteristics', 'sub3', <TagOutlined />, [
     getItem('Section 1', '3'),
     getItem('Section 2', '4'),
     getItem('Section 3', '5'),
     getItem('Section 4', '6'),
   ]),
-   getItem('impact Assessment', 'sub4', <SettingOutlined />),
-   getItem('Report', 'sub5', <SettingOutlined />),
+   getItem('impact Assessment', 'sub4', <EditOutlined />),
+   getItem('Report', 'sub5', <FileTextOutlined />),
 ];
 
 const { Header, Footer, Sider, Content } = Layout;
@@ -66,7 +67,7 @@ export default function Project() {
                 />
         </Sider>
         <Layout>
-            <Content>
+            <Content className='project-layout-content'>
                 <div className='project-detail-box'>
                     <div className='breadcrumb-box'>
                         <Breadcrumb>
@@ -76,11 +77,8 @@ export default function Project() {
                             </Breadcrumb.Item>
                         </Breadcrumb>
                     </div>
-                    <div className='second-conditions-box'>
-                        <SecondCharacteristics/>
-                    </div>
                 </div>
-                
+                <Route component={ThirdCharacteristics} path='/project'></Route>
             </Content>
         </Layout>
         </Layout>

@@ -1,3 +1,6 @@
 .first-characteristics-box .project-box{
     padding: 10px;
 }
+.first-characteristics-box{
+    border-radius: 5px;
+}

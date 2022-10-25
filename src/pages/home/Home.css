@@ -4,13 +4,25 @@
 .ant-layout{
     min-height: 100vh;
 }
-.ant-btn-primary{
+.ant-btn-primary,.ant-radio-group-solid .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled){
     background-color: #1976d2;
 }
 .ant-layout-header{
     padding: 0px 20px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
 }
-
+.ant-layout-sider{
+    position: fixed;
+    left: 0;
+    top: 64px;
+    height: 100%;
+}
+/* .ant-layout-content .home-layout-content{
+    position: absolute;
+    top: 68px;
+} */
 div{
     font-family: 'Times New Roman', Times, serif;
 }

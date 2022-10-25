@@ -1,0 +1,15 @@
+.project-info-box,.assessment-result-box{
+    margin-bottom:20px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+}
+.content-title{
+    background-color: #eee;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: gray;
+}
+.content-form{
+    padding: 10px;
+}

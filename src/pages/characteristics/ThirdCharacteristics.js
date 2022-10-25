@@ -1,6 +1,6 @@
 import { Checkbox,Form,Button } from 'antd';
 import React,{useState} from 'react'
-import './SecondCharacteristics.css'
+import './ThirdCharacteristics.css'
 const onChange = (checkedValues) => {
   console.log('checked = ', checkedValues);
 };
@@ -20,7 +20,7 @@ const options = [
   },
 ];
 
-export default function SecondCharacteristics() {
+export default function ThirdCharacteristics() {
   const [componentSize, setComponentSize] = useState('default');
   const onFormLayoutChange = ({ size }) => {
       setComponentSize(size);
@@ -28,7 +28,7 @@ export default function SecondCharacteristics() {
   return (
         <div className='first-characteristics-box'>
             <div className='project-section-title'>
-                    2. Are releases from the Project likely to have effects on the quality of any environmental media?
+                    3. Is the Project likely to affect the availability or scarcity of any resources either locally or globally?
             </div>
             <div className='project-box'>
             <Form

@@ -1,5 +1,5 @@
 import { Col, Row,Form,Input,Select,Button,DatePicker, Space,Image,Switch } from 'antd';
-import { FormOutlined,DeleteOutlined,FileTextOutlined } from '@ant-design/icons';
+import { FormOutlined,DeleteOutlined,FileTextOutlined,AppstoreOutlined,TableOutlined} from '@ant-design/icons';
 import React from 'react'
 import {Link } from 'react-router-dom';
 import './ProjectList.css'
@@ -152,12 +152,12 @@ export default function Project() {
        </div>
        <div className='project-box'>
           <div className='project-box-button'>
-            <Link to="/project">
+            <Link to="/projectDetail">
               <Button type="primary" htmlType="submit">
                 New Project 
               </Button>
             </Link>
-            <div><span>Grid</span><Switch defaultChecked onChange={onChange} style={{margin:'0px 5px'}}/><span>List</span></div>
+            <div><AppstoreOutlined/><Switch defaultChecked onChange={onChange} style={{margin:'0px 5px'}}/><TableOutlined/></div>
           </div>
           <div className='project-item-box'>
             <div className='project-item-title section-title'>
